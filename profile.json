@@ -1,0 +1,11 @@
+{
+  "font_family": "JetBrainsMono Nerd Font",
+  "remove_optional_apps": true,
+  "change_login_shell": true,
+  "serial_access": true,
+  "repo_packages": ["kitty", "zsh", "starship", "zsh-autosuggestions", "zsh-syntax-highlighting", "git", "base-devel", "github-cli", "python", "python-pip", "uv", "nodejs", "npm", "shellcheck", "shfmt", "bitwarden", "syncthing", "ark", "dfu-util", "usbutils", "nmap", "wireshark-qt", "tcpdump", "openbsd-netcat", "bind", "whois", "gobuster", "discord", "telegram-desktop", "vlc", "obs-studio", "flatpak", "btop", "ripgrep", "fd", "fzf", "eza", "zoxide", "noto-fonts-emoji"],
+  "aur_packages": ["visual-studio-code-bin", "brave-origin-bin"],
+  "flatpak_packages": ["org.expresslrs.ExpressLRSConfigurator"],
+  "remove_packages": ["1password", "1password-cli", "spotify", "signal-desktop", "obsidian", "libreoffice-fresh", "kdenlive", "pinta", "xournalpp", "moonlight-qt", "localsend", "cliamp", "omawrite"],
+  "remove_webapps": ["Basecamp", "HEY", "HEY Calendar", "Campfire", "ChatGPT", "Grok", "YouTube", "WhatsApp", "Google Messages", "Google Photos", "Google Contacts", "Google Maps", "X", "Zoom", "Figma"]
+}

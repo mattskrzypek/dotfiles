@@ -1,0 +1,5 @@
+# Narrow device rules for STM32 DFU, CP210x and CH340 bridges.
+# Serial tty access additionally comes from membership in Arch's uucp group.
+SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="df11", MODE="0660", GROUP="uucp", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="10c4", ATTR{idProduct}=="ea60", MODE="0660", GROUP="uucp", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="1a86", ATTR{idProduct}=="7523", MODE="0660", GROUP="uucp", TAG+="uaccess"
