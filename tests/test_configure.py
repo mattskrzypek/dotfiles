@@ -46,6 +46,15 @@ class ConfigurationTests(unittest.TestCase):
         self.assertEqual(before, (c.HOME / '.zshrc').read_bytes())
         self.assertFalse((c.HOME / '.config/omarchy/themes/cyber-green/backgrounds/fat-pigeon-green.png').exists())
 
+    def test_starship_installed_and_previous_prompt_restored(self):
+        previous = '[character]\nsuccess_symbol = ">"\n'
+        self.write('.config/starship.toml', previous)
+        backup = self.apply()
+        self.assertEqual((c.HOME / '.config/starship.toml').read_bytes(),
+                         (c.ROOT / 'config/starship.toml').read_bytes())
+        c.restore(backup, switch_theme=False)
+        self.assertEqual((c.HOME / '.config/starship.toml').read_text(), previous)
+
     def test_native_sizes_and_existing_settings(self):
         generated = c.build()
         kitty = generated['.config/kitty/kitty.conf'].decode()

@@ -112,6 +112,7 @@ include dotfiles-local.conf
     result['.config/kitty/kitty.conf'] = kitty
     zsh = (ROOT / 'config/zshrc').read_text(encoding='utf-8')
     result['.zshrc'] = block(text('.zshrc'), zsh)
+    result['.config/starship.toml'] = (ROOT / 'config/starship.toml').read_text(encoding='utf-8')
     result['.config/environment.d/90-dotfiles.conf'] = 'EDITOR=code\nVISUAL=code\nTERMINAL=kitty\nBROWSER=brave-origin\n'
     # Preserve existing GUI font size, changing only its family.
     for version in ('3.0', '4.0'):

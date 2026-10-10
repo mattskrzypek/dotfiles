@@ -21,7 +21,7 @@ To reapply settings without changing packages: `bash install.sh --config-only`.
 ## Your setup
 
 - **VS Code**, **Kitty**, **Brave Origin** (not regular Brave), and **Bitwarden**.
-- Zsh with Starship, suggestions, syntax highlighting, eza, zoxide, and mise integration. Existing `.zshrc` content is retained ahead of a managed block.
+- Zsh with a single-line Cyber Green Starship prompt (always-visible username/hostname, light grey path, neon green accents), suggestions, syntax highlighting, eza, zoxide, and mise integration. Existing `.zshrc` content is retained ahead of a managed block.
 - Git/GitHub CLI, Python/pip/uv, Node/npm, ShellCheck/shfmt, with Omarchy's development tools retained.
 - Syncthing and Ark; no LibreOffice or Obsidian.
 - Betaflight and EdgeTX Buddy app-window shortcuts in Brave Origin; ExpressLRS Configurator from Flathub; DFU/USB tools and narrow STM32, CP210x, and CH340 access rules. Reconnect USB devices after logging back in. Web flashing also needs browser device permission; grant it when prompted.
@@ -56,7 +56,7 @@ bash update.sh --apps   # also update/install packages and reapply cleanup
 
 Commit or stash local repository edits before updating. Updates use a fast-forward Git pull; nothing is scheduled automatically. To change the setup everywhere, edit and push this repository, then run the update script on each PC. Keep credentials, private keys, and personal files out of this public repository.
 
-For local-only customizations, use `~/.config/hypr/dotfiles-local.lua`, `~/.config/kitty/dotfiles-local.conf`, and `~/.zshrc.local`. These files are not managed. Main generated files are regenerated on update; unrelated VS Code, GTK, Qt, and shell JSON settings are preserved. JSONC comments are removed when VS Code settings are rewritten; the originals are backed up.
+For local-only customizations, use `~/.config/hypr/dotfiles-local.lua`, `~/.config/kitty/dotfiles-local.conf`, and `~/.zshrc.local`. These files are not managed. The Starship prompt is saved in `config/starship.toml` and installed to `~/.config/starship.toml`; edit the repository copy to keep prompt changes across updates. Main generated files are regenerated on update; unrelated VS Code, GTK, Qt, and shell JSON settings are preserved. JSONC comments are removed when VS Code settings are rewritten; the originals are backed up.
 
 ## Recovery
 
