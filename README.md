@@ -34,7 +34,7 @@ Cyber Green is a native Omarchy theme: near-black surfaces, green accents, reada
 
 JetBrains Mono Nerd Font is selected through fontconfig, GTK, existing Qt font settings, Kitty, and VS Code. **Omarchy's default font sizes and monitor scaling are retained.** Existing app-specific sizes are also preserved. Websites and apps with bundled fonts may use their own typography.
 
-`Super+Enter` opens Kitty, `Super+B` Brave Origin, `Super+C` VS Code, and `Super+E` the native Files app. `Super+H/J/K/L` focuses windows, `Super+Shift+H/J/K/L` swaps them, `Super+Q` closes a window, and `Super+M` opens btop. Omarchy's launcher, number workspaces, fullscreen, scratchpad, and screenshot bindings remain. Preinstalled app/webapp shortcuts are disabled, preventing bindings for removed apps from persisting.
+Omarchy's default hotkeys are enabled, with `Super+B` added to open the default browser (Brave Origin). `Super+Enter` opens the default terminal (Kitty), `Super+Shift+F` opens Files, and `Super+Shift+N` opens the default editor (VS Code). Default preinstalled app and webapp shortcuts are also enabled; shortcuts for removed apps require those apps to be installed again.
 
 The theme is installed locally under `~/.config/omarchy/themes/cyber-green` and selected through `omarchy-theme-set`; it appears in Omarchy's style menu. Omarchy generates terminal and editor themes from `colors.toml`, keeping them in sync when changing themes. The installer does not use Noctalia.
 

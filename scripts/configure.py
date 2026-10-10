@@ -97,8 +97,7 @@ def build():
     marker = 'require("default.hypr.omarchy")'
     if marker not in entry:
         raise ValueError('Expected Omarchy 4 Lua entry point was not found; no files changed')
-    entry = re.sub(r'^omarchy_preinstalled_bindings\s*=.*\n', '', entry, flags=re.M)
-    entry = entry.replace(marker, 'omarchy_preinstalled_bindings = false\n' + marker)
+    entry = re.sub(r'^omarchy_(?:preinstalled|default)_bindings\s*=.*\n', '', entry, flags=re.M)
     entry = block(entry, 'require("hypr.dotfiles")', '-- BEGIN DOTFILES MANAGED', '-- END DOTFILES MANAGED')
     result = {'.config/hypr/hyprland.lua': entry,
               '.config/hypr/dotfiles.lua': (ROOT / 'config/dotfiles.lua').read_text(encoding='utf-8')}

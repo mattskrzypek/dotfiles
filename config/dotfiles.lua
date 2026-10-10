@@ -14,22 +14,9 @@ hl.curve("dotfilesSmooth", { type = "bezier", points = { { 0.22, 1 }, { 0.36, 1 
 hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "dotfilesSmooth", style = "slide" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 4, bezier = "dotfilesSmooth", style = "slide" })
 
-local function bind(key, description, action)
-  hl.unbind(key)
-  o.bind(key, description, action)
-end
-bind("SUPER + RETURN", "Kitty", { omarchy = "terminal" })
-bind("SUPER + B", "Brave Origin", { omarchy = "browser" })
-bind("SUPER + C", "VS Code", { omarchy = "editor" })
-bind("SUPER + E", "Files", { omarchy = "nautilus" })
-bind("SUPER + Q", "Close window", hl.dsp.window.close())
-bind("SUPER + M", "System monitor", "kitty -e btop")
-for key, direction in pairs({ H = "l", J = "d", K = "u", L = "r" }) do
-  bind("SUPER + " .. key, "Focus " .. direction, hl.dsp.focus({ direction = direction }))
-  bind("SUPER + SHIFT + " .. key, "Swap " .. direction, hl.dsp.window.swap({ direction = direction }))
-end
--- Native Super+Space launcher, Super+1..9 workspaces, Super+F fullscreen,
--- Super+S scratchpad, and screen capture bindings remain available.
+-- Keep Omarchy default hotkeys; add Super+B for the browser.
+hl.unbind("SUPER + B")
+o.bind("SUPER + B", "Browser", { omarchy = "browser" })
 local local_path = os.getenv("HOME") .. "/.config/hypr/dotfiles-local.lua"
 local file = io.open(local_path, "r")
 if file then file:close(); dofile(local_path) end
