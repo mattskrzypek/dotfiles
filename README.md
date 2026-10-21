@@ -2,6 +2,14 @@
 
 Post-install setup for an **x86_64 Omarchy 4 desktop**. Reviewed against upstream tag `v4.0.4` (commit `c668141`). Older Omarchy releases using Hyprland `.conf` files are rejected before package changes. Finish the normal Omarchy installation and first-login setup first.
 
+## Project overview
+
+A practical Linux automation project combining Bash orchestration with a Python configuration engine. It supports a workstation used for security tools, software development, and FPV hardware workflows.
+
+**Engineering focus:** repeatable configuration, preservation of unrelated settings, validation before writes, timestamped file backups, and documented recovery limits. Explore the [configuration engine](scripts/configure.py), [regression tests](tests/test_configure.py), and [CI checks](.github/workflows/check.yml).
+
+[View my broader project portfolio](https://github.com/mattskrzypek/HomingPigeon/blob/main/docs/portfolio.md), including HomingPigeon, an email-header investigation workbench.
+
 ## Install
 
 Open a terminal in the Omarchy desktop, as your normal user:
